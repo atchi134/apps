@@ -213,4 +213,12 @@
   		</plugins>
   	</pluginManagement>
   </build>
+  <distributionManagement>
+  <snapshotRepository>
+  <id> deployment</id>
+  <name> internal snap</name>
+  <url> http://34.72.219.209:8081/repository/maven-snapshots/</url>
+  </snapshotRepository>
+  </distributionManagement>
+  
 </project>
