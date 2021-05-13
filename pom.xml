@@ -54,6 +54,27 @@
   </dependencies>
   
   <build>
+  
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-deploy-plugin</artifactId>
+    <version>3.0.0-M1</version>
+    <executions>
+        <execution>
+            <id>deploy-jar-file</id>
+            <phase>deploy</phase>
+            <goals>
+                <goal>deploy-file</goal>
+            </goals>
+            <configuration>
+                <file>${basedir}/target/${name}-${version}-${env}.zip</file>
+                <url>http://url</url>
+                <repositoryId>jenkins-maven-uploads</repositoryId>
+                <packaging>zip</packaging>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
   	<plugins>
   		<plugin>
   			<groupId>org.apache.maven.plugins</groupId>
@@ -214,11 +235,11 @@
   	</pluginManagement>
   </build>
   <distributionManagement>
-  <snapshotRepository>
-  <id> deployment</id>
-  <name> internal snap</name>
-  <url>http://35.202.37.144:8081/repository/maven-snapshots/</url>
-  </snapshotRepository>
+    <snapshotRepository>
+   <id> deployment</id>
+    <name> internal snap</name>
+      <url>http://35.222.238.221:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
   
 </project>
