@@ -5,7 +5,7 @@
   <groupId>demo</groupId>
   <artifactId>test</artifactId>
   <packaging>war</packaging>
-  <version>6.0-SNAPSHOT</version>
+  <version>7.0-SNAPSHOT</version>
   
   <properties>
   	<gig.version>0.4.3</gig.version>
@@ -215,9 +215,9 @@
   </build>
   <distributionManagement>
     <snapshotRepository>
-   <id>deployment</id>
+   <id>deploy</id>
     <name>snap</name>
-      <url>http://35.202.69.180/:8081/repository/maven-snapshots/</url>
+      <url>http://35.239.180.104:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   
